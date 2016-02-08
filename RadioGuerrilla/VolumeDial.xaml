@@ -1,0 +1,64 @@
+﻿<UserControl
+    x:Class="RadioGuerrilla.VolumeDial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RadioGuerrilla"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="240" Width="240">
+    
+    <Grid ManipulationMode="All" ManipulationDelta="Grid_ManipulationDelta">
+        <Ellipse Fill="#ED0F65" Stroke="Black" StrokeThickness="10"/>
+        <Ellipse Fill="Black" Height="100" Width="100"/>
+        <!--<Image Source="assets/volumelogo.png" Height="60"/>-->
+        <Grid>
+            <Grid.RenderTransform>
+                <RotateTransform CenterX="120" CenterY="120" Angle="{Binding Angle}"/>
+            </Grid.RenderTransform>
+            <!--<Ellipse Fill="Black" Height="40" Width="40" Margin="50" VerticalAlignment="Top"/>-->
+            <Polygon Points="120,45 95,80 145,80" Fill="Black"/>
+        </Grid>
+
+        <ItemsControl HorizontalAlignment="Center" VerticalAlignment="Top">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Line X1="0" Y1="5" X2="0" Y2="35" Stroke="DarkGray" StrokeThickness="5" StrokeEndLineCap="Round">
+                        <Line.RenderTransform>
+                            <RotateTransform CenterX="0" CenterY="120" Angle="{Binding}"/>
+                        </Line.RenderTransform>
+                    </Line>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <x:Double>000</x:Double>
+            <x:Double>015</x:Double>
+            <x:Double>030</x:Double>
+            <x:Double>045</x:Double>
+            <x:Double>060</x:Double>
+            <x:Double>075</x:Double>
+            <x:Double>090</x:Double>
+            <x:Double>105</x:Double>
+            <x:Double>120</x:Double>
+            <x:Double>135</x:Double>
+            <x:Double>150</x:Double>
+            <x:Double>165</x:Double>
+            <x:Double>180</x:Double>
+            <x:Double>195</x:Double>
+            <x:Double>210</x:Double>
+            <x:Double>225</x:Double>
+            <x:Double>240</x:Double>
+            <x:Double>255</x:Double>
+            <x:Double>270</x:Double>
+            <x:Double>285</x:Double>
+            <x:Double>300</x:Double>
+            <x:Double>315</x:Double>
+            <x:Double>330</x:Double>
+            <x:Double>345</x:Double>
+        </ItemsControl>
+        <Ellipse Stroke="Black" StrokeThickness="10"/>
+    </Grid>
+</UserControl>
